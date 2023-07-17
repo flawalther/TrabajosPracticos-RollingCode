@@ -1,32 +1,9 @@
+num1 = parseInt(prompt("Ingrese un lado del rectangulo"));
+num2 = parseInt(prompt("Ingrese el otro lado del rectangulo"));
 
- 
-// 9.- Escribe un programa que pida una frase y escriba las vocales que aparecen
-// Nota: Tener en cuenta la función length y substring o charAt (developer mozilla)
-// Ejemplo:
-// input: Hola mundo
-// Output: oau
-let frase = prompt("Ingrese una frase: ");
-let cantCaracteres = 0;
-let vocales = "";
-
-if (isNaN(frase)){
-    cantCaracteres = frase.length;
-    for(let i = 0; i < cantCaracteres; i++){
-        switch (frase.substring(i,i+1)){
-            case "a":
-            case "e":
-            case "i":
-            case "o":
-            case "u":
-                vocales = vocales + frase.substring(i,i+1);
-                break;
-        }
-    }
-    if (vocales == ""){
-        alert("Su frase no contiene vocales");
-    }else{
-        alert(`La frase contiene las siguientes vocales: ${vocales}`);}
-}else {
-    alert("No ingreso una frase");
+const suma = function (num1, num2) {
+    let perimetro = 2*(num1+num2);
+    alert(`El perimetro del rectangulo es: ${perimetro}`);
 }
 
+suma(num1,num2);
