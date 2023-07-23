@@ -82,11 +82,11 @@ const cadena = function (texto){
 
 // Output: 58
 
-num1 = parseInt(prompt("Ingrese un lado del rectangulo"));
-num2 = parseInt(prompt("Ingrese el otro lado del rectangulo"));
+num1 = Number(prompt("Ingrese un lado del rectangulo"));
+num2 = Number(prompt("Ingrese el otro lado del rectangulo"));
 
-const suma = function (num1, num2) {
-    let perimetro = 2*(num1+num2);
+const suma = function (n1, n2) {
+    let perimetro = 2*(n1+n2);
     alert(`El perimetro del rectangulo es: ${perimetro}`);
 }
 

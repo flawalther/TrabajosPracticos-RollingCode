@@ -77,7 +77,7 @@ if (num1 % 2 == 0){
 // Ejemplo: 
 // input: 20
 // Output: El 20 es divisible por 2.
-num1 = parseInt(prompt("Ingrese un mumero: "));
+num1 = parseInt(prompt("Ingrese un mumero: ")); 
 
 if (num1 % 2 == 0){
     console.log("El numero es divisible en 2");
