@@ -125,8 +125,8 @@ productos.forEach((producto) => {
 const mostrarProductosFiltrados = (dato) => {
 
     let productoFiltrado = productos.filter((info) => {
-        return info.toLowerCase().include(dato.Nombre.toLowerCase());
+        return info.Nombre.toLowerCase().includes(dato.toLowerCase());
     });
    
-      return productoFiltrado.Nombre;
+      return productoFiltrado;
 };

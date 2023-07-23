@@ -43,7 +43,7 @@
 // como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el 
 // resultado devuelto por la función.
 
-const numero = function (num){
+const numerito = function (num){
     if (num % 2 == 0){
         alert(`el num es par`);
     }else{
