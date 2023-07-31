@@ -1,3 +1,55 @@
+// 1- Crea un objeto llamado auto que tenga algunas características como el color, marca, modelo y si está 
+// encendido o apagado. Crea los métodos necesarios para permitir encender y apagar el auto.
+
+// Output:
+
+// objeto.encender();
+// objeto.apadar()
+// auto encendido
+// El auto se apagó
+
+
+
+let auto = {
+    color: "blanco",
+    marca: "Toyota",
+    modelo: "corolla",
+    estado: true,
+
+    encender: function(){
+        this.estado = true;
+        return ("El auto esta encendido");
+    },
+
+    apagar: function(){
+        this.estado = false;
+        return ("El auto esta apagado");
+    },
+
+}
+
+
+// 3-Escribe una clase que permita crear distintos objetos “rectángulos”, con las propiedades de alto y ancho,
+//  mas los métodos necesarios para modificar y mostrar sus propiedades, calcular el perímetro y el área
+
+
+class Rectangulo{
+    constructor (base1, altura1){
+        this.base = base1;
+        this.altura = altura1;
+        
+    }
+ 
+    Propiedades(){
+        let perimetro = 2 * this.base + 2 * this.altura;
+        let area = this.base * this.altura;
+        console.log (`El perimetro es: ${perimetro}`);
+        console.log (`El area es: ${area}`)
+    }
+}
+
+
+
 // 4- Escribe una clase Producto para crear objetos. Estos objetos, deben presentar las propiedades código,
 //  nombre y precio, además del método imprime datos, el cual escribe por pantalla los valores de sus propiedades.
 // Posteriormente, cree tres instancias de este objeto y guárdalas en un array.
@@ -33,25 +85,6 @@ class Producto{
 
 
 
-
-// let usuarios = {
-//     username: "Flavia",
-//     state: true,
-//     role: "administrador",
-//     cambiarEstado: function(){
-//         return this.state = !this.state
-//     }
-//     mostrarDato: function(){
-//         for (const propiedad in this){
-//             console.log (propiedad); // devuelve username
-//             if (propiedad != "cambiarEstado" && propiedad != "mostrarDato")
-//                 console.log (`${propiedad}: ${this[propiedad]}`) // devuelve username: Flavia
-//         }
-//     }
-// }
-
-
-
 // 5- Crea una clase llamada Persona que siga las siguientes condiciones:
 // Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura, año de nacimiento. 
 // Si quieres añadir alguna propiedad extra puedes hacerlo.
@@ -59,7 +92,6 @@ class Producto{
 // mostrarGeneracion: este método debe mostrar un mensaje indicando a qué generación pertenece la persona 
 // creada y cual es el rasgo característico de esta generación.
 // Para realizar este método tener en cuenta la siguiente tabla de generaciones:
-
 
 class Persona{
     constructor(nombre,edad,dni,sexo,peso,altura,nacimiento){
@@ -85,6 +117,4 @@ class Persona{
             console.log ("Pertenece a la generacion Z, caracterizado por la Irreverencia")
         }
     }
-
-
 }

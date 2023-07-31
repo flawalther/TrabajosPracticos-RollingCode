@@ -2,26 +2,27 @@
 // Crear un objeto con datos de usuario: username, state, role. 
 // Debe tener dos funciones, una que permita cambiar el estado y otra que muestre información del usuario.
 
-const usuarios = {
-    username: "flawalther",
-    state: "argentina",
-    role: "asistente",
+
+
+let usuarios = {
+    username: "Flavia",
+    state: true,
+    role: "administrador",
+    cambiarEstado: function(){
+        return this.state = !this.state
+    }
+    mostrarDato: function(){
+        for (const propiedad in this){
+            console.log (propiedad); // devuelve username
+            if (propiedad != "cambiarEstado" && propiedad != "mostrarDato")
+                console.log (`${propiedad}: ${this[propiedad]}`) // devuelve username: Flavia
+        }
+    }
 }
 
 const infoUsuarios = () => {
 document.write (`Username: ${usuarios.username} <br> State: ${usuarios.state} <br> Role: ${usuarios.role}`);
 }
-
-const cambiarState = () => {
-usuarios.state = "uruguay";
-}
-
-document.write (`<b> Datos de Usuario original: </b><br>`);
-infoUsuarios();
-cambiarState();
-document.write (`<br><br>-------------- <br><br>`);
-document.write (`<b> Datos de Usuario modificado: </b><br>`);
-infoUsuarios();
 
 
 
